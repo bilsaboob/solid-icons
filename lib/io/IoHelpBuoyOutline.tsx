@@ -1,0 +1,8 @@
+import { renderIcon } from "../index";
+  export function IoHelpBuoyOutline(props:any) {
+      return renderIcon({
+        a: {"viewBox":"0 0 512 512"},
+        c: '<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 48A208 208 0 1 0 256 464 208 208 0 1 0 256 48z"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 176A80 80 0 1 0 256 336 80 80 0 1 0 256 176z"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M208 54 216 186"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M296 186 304 54"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M208 458 216 326"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M296 326 304 458"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M458 208 326 216"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M326 296 458 304"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M54 208 186 216"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M186 296 54 304"/>'
+      }, props)
+  };
+  export default IoHelpBuoyOutline;

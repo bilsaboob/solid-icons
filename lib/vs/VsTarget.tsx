@@ -1,0 +1,8 @@
+import { renderIcon } from "../index";
+  export function VsTarget(props:any) {
+      return renderIcon({
+        a: {"fill":"currentColor","viewBox":"0 0 16 16"},
+        c: '<path d="M8 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/><path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-4 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0Zm-7 6A6 6 0 1 0 8 2a6 6 0 0 0 0 12Z"/>'
+      }, props)
+  };
+  export default VsTarget;

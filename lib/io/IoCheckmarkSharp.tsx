@@ -1,0 +1,8 @@
+import { renderIcon } from "../index";
+  export function IoCheckmarkSharp(props:any) {
+      return renderIcon({
+        a: {"viewBox":"0 0 512 512"},
+        c: '<path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="44" d="M416 128 192 384 96 288"/>'
+      }, props)
+  };
+  export default IoCheckmarkSharp;

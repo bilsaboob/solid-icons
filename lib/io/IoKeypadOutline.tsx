@@ -1,0 +1,8 @@
+import { renderIcon } from "../index";
+  export function IoKeypadOutline(props:any) {
+      return renderIcon({
+        a: {"viewBox":"0 0 512 512"},
+        c: '<path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M256 416A32 32 0 1 0 256 480 32 32 0 1 0 256 416z"/><path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M256 288A32 32 0 1 0 256 352 32 32 0 1 0 256 288z"/><path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M288 192a32 32 0 1 1-32-32 32 32 0 0 1 32 32Z"/><path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M256 32A32 32 0 1 0 256 96 32 32 0 1 0 256 32z"/><path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M384 288A32 32 0 1 0 384 352 32 32 0 1 0 384 288z"/><path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M384 160A32 32 0 1 0 384 224 32 32 0 1 0 384 160z"/><path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M384 32A32 32 0 1 0 384 96 32 32 0 1 0 384 32z"/><path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M128 288A32 32 0 1 0 128 352 32 32 0 1 0 128 288z"/><path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M128 160A32 32 0 1 0 128 224 32 32 0 1 0 128 160z"/><path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M128 32A32 32 0 1 0 128 96 32 32 0 1 0 128 32z"/>'
+      }, props)
+  };
+  export default IoKeypadOutline;

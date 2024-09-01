@@ -1,0 +1,8 @@
+import { renderIcon } from "../index";
+  export function IoOptionsOutline(props:any) {
+      return renderIcon({
+        a: {"viewBox":"0 0 512 512"},
+        c: '<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 128 448 128"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M64 128 304 128"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 384 448 384"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M64 384 304 384"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M208 256 448 256"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M64 256 144 256"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M336 96A32 32 0 1 0 336 160 32 32 0 1 0 336 96z"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M176 224A32 32 0 1 0 176 288 32 32 0 1 0 176 224z"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M336 352A32 32 0 1 0 336 416 32 32 0 1 0 336 352z"/>'
+      }, props)
+  };
+  export default IoOptionsOutline;

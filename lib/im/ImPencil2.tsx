@@ -1,0 +1,8 @@
+import { renderIcon } from "../index";
+  export function ImPencil2(props:any) {
+      return renderIcon({
+        a: {"viewBox":"0 0 16 16"},
+        c: '<path fill="currentColor" d="m6 10 2-1 7-7-1-1-7 7-1 2zm-1.48 3.548c-.494-1.043-1.026-1.574-2.069-2.069l1.548-4.262 2-1.217 6-6h-3l-6 6-3 10 10-3 6-6V4l-6 6-1.217 2z"/>'
+      }, props)
+  };
+  export default ImPencil2;
