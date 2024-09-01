@@ -12,7 +12,7 @@ import {
   LIB_PACKAGE_JSON,
   EXPORTS_KEYS,
 } from "./constants"
-import { fileTypes, fileTypesPerFile } from "./file-templates"
+import { fileTypes } from "./file-templates"
 import { getFileByPath } from "./get-icons"
 import packages from "./packages.json" assert { type: "json" }
 import { PackageJSONExport, PackAttachedIcons, PackItem } from "./types"
@@ -102,17 +102,6 @@ function writeEachPack(pack: PackAttachedIcons) {
 
     fs.appendFileSync(fileName, type.header)
     pack.icons.forEach((icon) => {
-      fs.appendFileSync(fileName, type.template(icon))
-    })
-  }
-
-  // icon.js per file for explicit imports
-  for (let index = 0; index < fileTypesPerFile.length; index++) {
-    const type = fileTypesPerFile[index]
-
-    pack.icons.forEach((icon) => {
-      const fileName = `${packFolder}/${type.fileName(icon)}`
-      fs.appendFileSync(fileName, type.header)
       fs.appendFileSync(fileName, type.template(icon))
     })
   }

@@ -20,10 +20,10 @@ function moduleTemplate(icon: IconContent) {
   }`
 }
 
-function moduleTemplatePerFile(icon: IconContent) {
+function moduleTemplateIncludeLib(icon: IconContent) {
   return /* javascript */ `
-  export function ${icon.fileName}(props) {
-      return IconTemplate({
+  export function ${icon.fileName}(props:any) {
+      return renderIcon({
         a: ${JSON.stringify(icon.svgAttribs)},
         c: '${icon.contents}'
       }, props)
@@ -59,12 +59,12 @@ export const fileTypes = [
   },
 ]
 
-export const fileTypesPerFile = [
+export const includeLibFileTypes = [
   {
     type: "mjs",
-    template: (iconContent: IconContent) => moduleTemplatePerFile(iconContent),
+    template: (iconContent: IconContent) => moduleTemplateIncludeLib(iconContent),
     // eslint-disable-next-line quotes, @typescript-eslint/quotes
-    header: /* javascript */ `import { IconTemplate } from "../lib/index.jsx";`,
-    fileName: (iconContent: IconContent) => `${iconContent.fileName}.js`,
+    header: /* javascript */ `import { renderIcon } from "../index";`,
+    fileName: (iconContent: IconContent) => `${iconContent.fileName}.tsx`,
   }
 ]

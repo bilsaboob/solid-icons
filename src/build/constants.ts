@@ -1,17 +1,19 @@
-import path from "path";
-import * as dotenv from "dotenv";
-dotenv.config();
+import path from "path"
+import * as dotenv from "dotenv"
+dotenv.config()
 
-const DEFAULT_WEB_PATH = "../web/public";
+const DEFAULT_WEB_PATH = "../web/public"
 
-export const ROOT_PATH = path.resolve();
-export const DIST_PATH = path.resolve("./dist");
+export const ROOT_PATH = path.resolve()
+export const DIST_PATH = path.resolve("./dist")
+export const INCLUDE_LIB_PATH = path.resolve("./lib")
+export const SRC_PATH = path.resolve("./src")
 export const WEB_PATH = path.resolve(
   ROOT_PATH,
   process.env.WEB_PATH || DEFAULT_WEB_PATH
-);
-export const WEB_ICONS_PATH = path.resolve(WEB_PATH);
-export const log = console.log;
+)
+export const WEB_ICONS_PATH = path.resolve(WEB_PATH)
+export const log = console.log
 
 export const LIB_PACKAGE_JSON = /* javascript */ `{
   "main": "./index.cjs",
@@ -23,7 +25,7 @@ export const LIB_PACKAGE_JSON = /* javascript */ `{
       "solid": "./index.jsx"
     }
   }
-}`;
+}`
 
 export const ROOT_EXPORT = {
   browser: "./lib/index.js",
@@ -32,20 +34,20 @@ export const ROOT_EXPORT = {
   default: "./lib/index.jsx",
   solid: "./lib/index.jsx",
   astro: "./lib/index.jsx",
-};
+}
 
-export const includedFiles = ["LICENSE", "README.md"];
+export const includedFiles = ["LICENSE", "README.md"]
 
 export const tinyStyles: Record<string, string> = {
   Filled: "Fill",
   Outlined: "Outline",
   undefined: "",
-};
+}
 
 export const supportedArgs = {
   ISOLATE: "--isolate",
   WEB: "--web",
-};
+}
 
 export const NORMALIZE_PACK: Record<string, string> = {
   AI: "ai",
@@ -53,13 +55,13 @@ export const NORMALIZE_PACK: Record<string, string> = {
   HI: "hi",
   TB: "tb",
   RI: "ri",
-};
+}
 
 export const NORMALIZE_FILE_NAME = {
   WI: "wi",
   IM: "im",
   BI: "bi",
   OC: "oc",
-};
+}
 
-export const EXPORTS_KEYS = ["worker", "deno", "node", "development"];
+export const EXPORTS_KEYS = ["worker", "deno", "node", "development"]

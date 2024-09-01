@@ -13,6 +13,7 @@
     "coverage": "vitest --config ./vitest.config.ts --coverage",
     "submodule": "git submodule update --init --recursive",
     "build": "node --no-warnings --loader ts-node/esm --experimental-specifier-resolution=node ./src/build/index.ts",
+    "build:local": "shx rm -rf ./lib && yarn build",
     "build:lib": "rollup --configPlugin @rollup/plugin-typescript -c",
     "build:all": "shx rm -rf ./dist_all && shx mkdir ./dist_all && yarn build --web && shx cp ./all_package.json ./dist_all/package.json",
     "publish": "yarn build && npm publish ./dist",
