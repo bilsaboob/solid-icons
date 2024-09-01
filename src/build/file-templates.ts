@@ -1,4 +1,4 @@
-import type { IconContent } from "./types";
+import type { IconContent } from "./types"
 
 function cjsTemplate(icon: IconContent): string {
   return /* javascript */ `
@@ -7,7 +7,7 @@ function cjsTemplate(icon: IconContent): string {
         a: ${JSON.stringify(icon.svgAttribs)},
         c: '${icon.contents}'
       }, props)
-  }`;
+  }`
 }
 
 function moduleTemplate(icon: IconContent) {
@@ -17,11 +17,22 @@ function moduleTemplate(icon: IconContent) {
         a: ${JSON.stringify(icon.svgAttribs)},
         c: '${icon.contents}'
       }, props)
-  }`;
+  }`
+}
+
+function moduleTemplatePerFile(icon: IconContent) {
+  return /* javascript */ `
+  export function ${icon.fileName}(props) {
+      return IconTemplate({
+        a: ${JSON.stringify(icon.svgAttribs)},
+        c: '${icon.contents}'
+      }, props)
+  };
+  export default ${icon.fileName};`
 }
 
 function typesTemplate(icon: IconContent) {
-  return /* javascript */ `\nexport declare const ${icon.fileName}: IconTypes;`;
+  return /* javascript */ `\nexport declare const ${icon.fileName}: IconTypes;`
 }
 
 export const fileTypes = [
@@ -46,4 +57,14 @@ export const fileTypes = [
     header: /* javascript */ `import type { IconTypes } from "../lib/index"\n`,
     fileName: "index.d.ts",
   },
-];
+]
+
+export const fileTypesPerFile = [
+  {
+    type: "mjs",
+    template: (iconContent: IconContent) => moduleTemplatePerFile(iconContent),
+    // eslint-disable-next-line quotes, @typescript-eslint/quotes
+    header: /* javascript */ `import { IconTemplate } from "../lib/index.jsx";`,
+    fileName: (iconContent: IconContent) => `${iconContent.fileName}.js`,
+  }
+]
