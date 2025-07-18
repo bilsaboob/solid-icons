@@ -27,7 +27,7 @@ function getArgs() {
 async function main() {
   const { isIsolate, buildWeb } = getArgs()
 
-  await prepareDist()
+  // await prepareDist()
   await prepareIncludeLibDist()
 
   const coditionalPack =
@@ -42,7 +42,7 @@ async function main() {
     }))
   )
 
-  writeLibFiles(attachedFiles)
+  // writeLibFiles(attachedFiles)
   writeIncludeLibFiles(attachedFiles)
 
   if (buildWeb) writeWebFiles(attachedFiles)
